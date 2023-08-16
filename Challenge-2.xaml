@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Data_Table" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="688,3995" sap2010:WorkflowViewState.IdRef="Data_Table_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Data_Table" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="688,4343" sap2010:WorkflowViewState.IdRef="Data_Table_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -91,7 +91,7 @@
       <AssemblyReference>System.Data.SqlClient</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="698,3930" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence sap:VirtualizedContainerService.HintSize="698,4278" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="CardPaymentsDT" />
       <Variable x:TypeArguments="sd:DataTable" Name="CashPaymentsDT" />
@@ -185,34 +185,45 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:MergeDataTable>
-    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" sap2010:Annotation.AnnotationText="Allows us to use other excel activities like Use Excel File, Read Range. The focus of this scope is to write data to excel from Data Table" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="636,779" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_2">
+    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" sap2010:Annotation.AnnotationText="Allows us to use other excel activities like Use Excel File, Read Range. The focus of this scope is to write data to excel from Data Table" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="636,882" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_2">
       <ueab:ExcelProcessScopeX.Body>
         <ActivityAction x:TypeArguments="ui:IExcelProcess">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
           </ActivityAction.Argument>
-          <Sequence sap:VirtualizedContainerService.HintSize="592,650" sap2010:WorkflowViewState.IdRef="Sequence_9">
+          <Sequence sap:VirtualizedContainerService.HintSize="592,753" sap2010:WorkflowViewState.IdRef="Sequence_9">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="530,539" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_3" ResizeWindow="None" WorkbookPath="CardPayments.xlsx">
+            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" sap2010:Annotation.AnnotationText="We will use the CardPayments file to do data aggregation and analysis" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="530,642" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_3" ResizeWindow="None" WorkbookPath="CardPayments.xlsx">
               <ueab:ExcelApplicationCard.Body>
                 <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,270" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,342" sap2010:WorkflowViewState.IdRef="Sequence_7">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ueab:WriteRangeX Destination="[Excel.Sheet(&quot;Combined&quot;)]" DisplayName="Write DataTable to Excel" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteRangeX_2" IgnoreEmptySource="False" Source="[CardPaymentsDT]" />
+                    <ueab:WriteRangeX sap2010:Annotation.AnnotationText="We send data from the CardPaymentsDT which has combined the Card and Cash expenses. We create a new worksheet called combined where the consolidated data is written to.&#xD;&#xA;" Destination="[Excel.Sheet(&quot;Combined&quot;)]" DisplayName="Write DataTable to Excel" sap:VirtualizedContainerService.HintSize="434,231" sap2010:WorkflowViewState.IdRef="WriteRangeX_2" IgnoreEmptySource="False" Source="[CardPaymentsDT]">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ueab:WriteRangeX>
                   </Sequence>
                 </ActivityAction>
               </ueab:ExcelApplicationCard.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
             </ueab:ExcelApplicationCard>
           </Sequence>
         </ActivityAction>
@@ -223,31 +234,31 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ueab:ExcelProcessScopeX>
-    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="636,1183" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_3">
+    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" sap2010:Annotation.AnnotationText="This process scope is to be used to manipulate data in the &quot;Combined&quot; worksheet in the &quot;CardPayments&quot; workbook&#xD;&#xA;" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="636,1428" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_3">
       <ueab:ExcelProcessScopeX.Body>
         <ActivityAction x:TypeArguments="ui:IExcelProcess">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="592,1096" sap2010:WorkflowViewState.IdRef="Sequence_11">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="592,1284" sap2010:WorkflowViewState.IdRef="Sequence_11">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="530,985" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_4" ResizeWindow="None" WorkbookPath="CardPayments.xlsx">
+            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" sap2010:Annotation.AnnotationText="We use the &quot;CardPayments&quot; workbook for further data manipulation" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="530,1173" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_4" ResizeWindow="None" WorkbookPath="CardPayments.xlsx">
               <ueab:ExcelApplicationCard.Body>
                 <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,716" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,873" sap2010:WorkflowViewState.IdRef="Sequence_12">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ueab:CreatePivotTableXv2 DestinationRange="[Excel.Sheet(&quot;Pivot1&quot;)]" DisplayName="Create Pivot Table" sap:VirtualizedContainerService.HintSize="434,427" sap2010:WorkflowViewState.IdRef="CreatePivotTableXv2_3" LayoutRowType="Compact" Range="[Excel.Sheet(&quot;Combined&quot;)]" TableName="Final_Pivot" ValuesMode="Columns">
+                    <ueab:CreatePivotTableXv2 sap2010:Annotation.AnnotationText="We create a Pivot table to help in summarizing the combined data." DestinationRange="[Excel.Sheet(&quot;Pivot1&quot;)]" DisplayName="Create Pivot Table" sap:VirtualizedContainerService.HintSize="434,542" sap2010:WorkflowViewState.IdRef="CreatePivotTableXv2_3" LayoutRowType="Compact" Range="[Excel.Sheet(&quot;Combined&quot;)]" TableName="Final_Pivot" ValuesMode="Columns">
                       <ueab:CreatePivotTableXv2.Body>
                         <ActivityAction>
                           <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_13">
@@ -256,27 +267,55 @@
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <ueab:PivotTableFieldX DisplayName="Pivot Field" FieldName="Expense" Function="Product" sap:VirtualizedContainerService.HintSize="382,85" sap2010:WorkflowViewState.IdRef="PivotTableFieldX_1" Type="Row" />
-                            <ueab:PivotTableFieldX DisplayName="Pivot Field" FieldName="Value" Function="Sum" sap:VirtualizedContainerService.HintSize="382,85" sap2010:WorkflowViewState.IdRef="PivotTableFieldX_2" Type="Value" />
+                            <ueab:PivotTableFieldX sap2010:Annotation.AnnotationText="This Pivot field allows us to group our costs under expense type in rows" DisplayName="Pivot Field" FieldName="Expense" Function="Product" sap:VirtualizedContainerService.HintSize="382,127" sap2010:WorkflowViewState.IdRef="PivotTableFieldX_1" Type="Row">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ueab:PivotTableFieldX>
+                            <ueab:PivotTableFieldX sap2010:Annotation.AnnotationText="Thios Pivot field allows us to get the summation of all the grouped expenses." DisplayName="Pivot Field" FieldName="Value" Function="Sum" sap:VirtualizedContainerService.HintSize="382,127" sap2010:WorkflowViewState.IdRef="PivotTableFieldX_2" Type="Value">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ueab:PivotTableFieldX>
                           </Sequence>
                         </ActivityAction>
                       </ueab:CreatePivotTableXv2.Body>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
                     </ueab:CreatePivotTableXv2>
-                    <ueab:FillRangeX DestinationRange="[Excel.Sheet(&quot;Pivot1&quot;).Range(&quot;C2:C12&quot;)]" DisplayName="Fill Range" sap:VirtualizedContainerService.HintSize="434,138" sap2010:WorkflowViewState.IdRef="FillRangeX_2" Value="[&quot;=(B2/$B$13)*100&quot;]">
+                    <ueab:FillRangeX sap2010:Annotation.AnnotationText="This process allows us to add a calculated column for percentage against each group of expenses which is the final result need in this challenge" DestinationRange="[Excel.Sheet(&quot;Pivot1&quot;).Range(&quot;C2:C12&quot;)]" DisplayName="Fill Range" sap:VirtualizedContainerService.HintSize="434,180" sap2010:WorkflowViewState.IdRef="FillRangeX_2" Value="[&quot;=(B2/$B$13)*100&quot;]">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ueab:FillRangeX>
                   </Sequence>
                 </ActivityAction>
               </ueab:ExcelApplicationCard.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
             </ueab:ExcelApplicationCard>
           </Sequence>
         </ActivityAction>
       </ueab:ExcelProcessScopeX.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
     </ueab:ExcelProcessScopeX>
   </Sequence>
 </Activity>
